@@ -8,8 +8,14 @@ export default {
       toDo: [
         { text: 'Andare dal barbiere per tagliare i capelli', done: false },
         { text: 'Lavare il pavimento', done: false },
-        { text: 'Fare la spesa', done: false },
-        { text: 'Fare esercizi', done: true }
+        { text: 'Fare la spesa', done: true },
+        { text: 'Andare in palestra', done: false },
+        { text: 'Lavare la macchina', done: false },
+        { text: 'Inviare mail', done: false },
+        { text: 'Comprare il pane', done: false },
+        { text: 'Sbattere tappeti', done: false },
+        { text: 'Ritirare al bancomat', done: false },
+        { text: 'Fare gli esercizi di Boolean', done: true }
       ]
     };
   },
