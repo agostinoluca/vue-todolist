@@ -1,9 +1,37 @@
-.toDoList:hover {
-  cursor: pointer;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-li:hover {
-  font-size: 1.2rem;
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.paper {
+  background-color: bisque;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.5rem 0.5rem 1.5rem black;
+}
+
+.paper h1 {
+  font-style: italic;
+}
+
+.toDoList {
+  padding: 2rem;
+}
+
+.toDoList:hover {
+  cursor: pointer;
 }
 
 .completed {

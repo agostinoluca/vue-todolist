@@ -4,6 +4,7 @@ export default {
   data() {
 
     return {
+      name: 'To Do List',
       toDo: [
         { text: 'Andare dal barbiere per tagliare i capelli', done: false },
         { text: 'Lavare il pavimento', done: false },
@@ -22,11 +23,16 @@ export default {
 </script>
 
 <template>
-<ul class="toDoList">
-  <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
-    {{ todo.text }}
-  </li>
-</ul>
+<div class="container">
+  <div class="paper">
+    <h1>{{ name }}</h1>
+    <ul class="toDoList">
+      <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
+        {{ todo.text }}
+      </li>
+    </ul>
+  </div>
+</div>
 
 </template>
 
