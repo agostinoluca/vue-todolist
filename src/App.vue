@@ -11,14 +11,19 @@ export default {
         { text: 'Fare esercizi', done: true }
       ]
     };
+  },
+  methods: {
+    toggleDone(index) {
+      this.toDo[index].done = !this.toDo[index].done;
+    }
   }
 };
 
 </script>
 
 <template>
-<ul>
-  <li v-for="(todo, index) in toDo" :key="index" :class="{ 'completed' : todo.done }">
+<ul class="toDoList">
+  <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
     {{ todo.text }}
   </li>
 </ul>
