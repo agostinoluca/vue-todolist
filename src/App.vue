@@ -18,7 +18,7 @@ export default {
 
 <template>
 <ul>
-  <li v-for="(todo, index) in toDo" :key="index">
+  <li v-for="(todo, index) in toDo" :key="index" :class="{ 'completed' : todo.done }">
     {{ todo.text }}
   </li>
 </ul>
