@@ -14,8 +14,13 @@ export default {
     };
   },
   methods: {
+    // l'elemento cambia lo stato booleano dell'attributo 'done' al click
     toggleDone(index) {
       this.toDo[index].done = !this.toDo[index].done;
+    },
+    // al click sulla x recupera l'index del toDo e lo elimina
+    removeTodo(index) {
+      this.toDo.splice(index, 1);
     }
   }
 };
@@ -29,6 +34,7 @@ export default {
     <ul class="toDoList">
       <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
         {{ todo.text }}
+        <button @click="removeTodo(index)">x</button>
       </li>
     </ul>
   </div>
