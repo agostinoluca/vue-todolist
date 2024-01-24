@@ -2,6 +2,7 @@
 export default {
   name: 'App',
   data() {
+
     return {
       toDo: [
         { text: 'Andare dal barbiere per tagliare i capelli', done: false },
@@ -17,8 +18,8 @@ export default {
 
 <template>
 <ul>
-  <li>
-    {{ toDo }}
+  <li v-for="(todo, index) in toDo" :key="index">
+    {{ todo.text }}
   </li>
 </ul>
 
