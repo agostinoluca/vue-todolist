@@ -16,6 +16,11 @@ export default {
 </script>
 
 <template>
+<ul>
+  <li>
+    {{ toDo }}
+  </li>
+</ul>
 
 </template>
 
