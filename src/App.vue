@@ -37,12 +37,15 @@ export default {
 <div class="container">
   <div class="paper">
     <h1>{{ name }}</h1>
-    <ul class="toDoList">
+    <ul class="toDoList" v-if="toDo.length > 0">
       <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
         {{ todo.text }}
         <button @click="removeTodo(index)">x</button>
       </li>
     </ul>
+    <div v-else>
+      <h3 class="finish">Non hai nulla da fare. STUDIA! &#128540 </h3>
+    </div>
   </div>
 </div>
 
