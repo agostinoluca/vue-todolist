@@ -32,7 +32,7 @@ export default {
       if (this.newTodo.trim() !== '' && this.newTodo.length > 3) {
         this.toDo.push({ text: this.newTodo, done: false});
         this.error = '';
-      } else if (this.newTodo.length < 3) {
+      } else if (this.newTodo.length <= 3) {
         this.error = 'Add at least 4 characters.';
       } else {
         this.error = 'You entered an invalid input.';
