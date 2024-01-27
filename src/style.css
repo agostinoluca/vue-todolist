@@ -8,42 +8,11 @@ body {
   background-color: #ededed;
 }
 
-.container {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.toDoList {
-  padding: 2rem;
-  font-size: 1.5rem;
-  position: relative;
-}
-
-.toDoList:hover {
+.list-group:hover {
   cursor: pointer;
-}
-
-.toDoList li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.toDoList li::before {
-  content: '-';
 }
 
 .completed {
   text-decoration: line-through rgb(70, 70, 70);
   color: gray;
-}
-
-.finish {
-  margin-top: 5rem;
-  font-size: 1.5rem;
-  color: green;
 }

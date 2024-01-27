@@ -34,11 +34,11 @@ export default {
 </script>
 
 <template>
-<div class="container">
-  <div class="card">
-    <h1>{{ name }}</h1>
-    <ul class="list-group" v-if="toDo.length > 0">
-      <li class="list-group-item" v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
+<div class="container mt-5">
+  <div class="card p-3 w-75 m-auto">
+    <h1 class="text-center">{{ name }}</h1>
+    <ul class="list-group fs-3" v-if="toDo.length > 0">
+      <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
         {{ todo.text }}
         <span>
           <button @click="removeTodo(index)">x</button>
@@ -46,7 +46,7 @@ export default {
       </li>
     </ul>
     <div v-else>
-      <h3 class="finish">Non hai nulla da fare. STUDIA! &#128540 </h3>
+      <h3 class="finish fs-3 text-success">Non hai nulla da fare. STUDIA! &#128540 </h3>
     </div>
   </div>
 </div>
