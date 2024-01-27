@@ -29,7 +29,17 @@ export default {
     // al click sulla x recupera l'index del toDo e lo elimina
     removeTodo(index) {
       this.toDo.splice(index, 1);
-    }
+    },
+    addTodo() {
+      if (this.newTodo.trim() !== '' && this.newTodo.length > 3) {
+        this.toDo.push({ text: this.newTodo, done: false})
+      } else if (this.newTodo.length < 3) {
+        console.log('Add at least 4 characters');
+      } else {
+        console.log('You entered an invalid input');
+      };
+      this.newTodo = '';
+    }    
   }
 };
 
@@ -42,7 +52,7 @@ export default {
       <h1 class="text-center">{{ name }}</h1>
       <div class="d-flex gap-1 ">
         <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="add new To Do here">
-        <button class="p-1">Add</button>
+        <button class="p-1" @click="addTodo">Add</button>
       </div>
     </div>
     <ul class="list-group fs-3" v-if="toDo.length > 0">
