@@ -40,9 +40,9 @@ export default {
   <div class="card p-3 w-75 m-auto">
     <div class="d-flex justify-content-around align-items-center">
       <h1 class="text-center">{{ name }}</h1>
-      <div class="d-flex gap-3 ">
-        <label for="newTodo">Aggiungi un To Do</label>
-        <input v-model="newTodo" type="text" name="newTodo" id="newTodo">
+      <div class="d-flex gap-1 ">
+        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="add new To Do here">
+        <button class="p-1">Add</button>
       </div>
     </div>
     <ul class="list-group fs-3" v-if="toDo.length > 0">
