@@ -35,12 +35,14 @@ export default {
 
 <template>
 <div class="container">
-  <div class="paper">
+  <div class="card">
     <h1>{{ name }}</h1>
-    <ul class="toDoList" v-if="toDo.length > 0">
-      <li v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
+    <ul class="list-group" v-if="toDo.length > 0">
+      <li class="list-group-item" v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
         {{ todo.text }}
-        <button @click="removeTodo(index)">x</button>
+        <span>
+          <button @click="removeTodo(index)">x</button>
+        </span>
       </li>
     </ul>
     <div v-else>
