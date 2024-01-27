@@ -51,7 +51,7 @@ export default {
     <div class="d-flex justify-content-around align-items-center">
       <h1 class="text-center">{{ name }}</h1>
       <div class="d-flex gap-1 ">
-        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="add new To Do here">
+        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" placeholder="add new To Do here" @keypress.enter="addTodo">
         <button class="p-1" @click="addTodo">Add</button>
       </div>
     </div>
