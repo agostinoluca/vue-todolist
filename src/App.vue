@@ -5,6 +5,7 @@ export default {
 
     return {
       name: 'To Do List',
+      newTodo: '',
       toDo: [
         { text: 'Andare dal barbiere per tagliare i capelli', done: false },
         { text: 'Lavare il pavimento', done: false },
@@ -18,6 +19,7 @@ export default {
         { text: 'Fare gli esercizi di Boolean', done: true }
       ]
     };
+    console.log(newTodo);
   },
   methods: {
     // l'elemento cambia lo stato booleano dell'attributo 'done' al click
@@ -36,7 +38,13 @@ export default {
 <template>
 <div class="container mt-5">
   <div class="card p-3 w-75 m-auto">
-    <h1 class="text-center">{{ name }}</h1>
+    <div class="d-flex justify-content-around align-items-center">
+      <h1 class="text-center">{{ name }}</h1>
+      <div class="d-flex gap-3 ">
+        <label for="newTodo">Aggiungi un To Do</label>
+        <input v-model="newTodo" type="text" name="newTodo" id="newTodo">
+      </div>
+    </div>
     <ul class="list-group fs-3" v-if="toDo.length > 0">
       <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in toDo" :key="index" @click="toggleDone(index)" :class="{ 'completed': todo.done }">
         {{ todo.text }}
